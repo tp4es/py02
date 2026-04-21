@@ -2,14 +2,14 @@
 
 def input_temperature(temp: str):
     try:
-        temp = int(temp)
+        n = int(temp)
     except ValueError:
         raise ValueError(
             "Invalid temperature input. Please enter a valid integer.")
-    if int(temp) not in range(0, 41):
+    if n not in range(0, 41):
         raise ValueError(
             "Temperature must be between 0 and 40 degrees Celsius.")
-    return int(temp)
+    return n
 
 
 def test_temperature():
